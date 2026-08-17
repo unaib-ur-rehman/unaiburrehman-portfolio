@@ -4,7 +4,7 @@ import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
 import { DevProjects } from "@/components/DevProjects";
-import { DesignProjects } from "@/components/DesignProjects";
+// import { DesignProjects } from "@/components/DesignProjects";
 import { Education } from "@/components/Education";
 import { Certifications } from "@/components/Certifications";
 import { Footer } from "@/components/Footer";
@@ -23,7 +23,7 @@ export default function Home() {
         <Skills />
         <Experience />
         <DevProjects />
-        <DesignProjects />
+        {/* <DesignProjects /> */}
         <Education />
         <Certifications />
       </div>

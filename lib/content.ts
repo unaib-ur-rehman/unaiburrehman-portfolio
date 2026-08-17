@@ -7,7 +7,8 @@ export type Project = {
   stack: string[];
   link: string;
   linkLabel: string;
-  kind: "Development Project" | "UI / UX Case Study";
+  kind: "Web App" | "Mobile App" | "UI / UX Case Study" | "Web / Mobile App" | "";
+
   image: string;
 };
 
@@ -147,57 +148,57 @@ const GITHUB_URL = "https://github.com/unaib-ur-rehman/";
 const BEHANCE_URL = "https://www.behance.net/unaiburrehman";
 
 export const devProjects: Project[] = [
-  {
-    id: "dev-1",
-    tag: "Full-Stack · React + Node",
-    name: "Project One [placeholder]",
-    desc: "A short one-line description of what you built and the problem it solves.",
-    detail:
-      "Placeholder — replace with the full story: what the product does, who it's for, the problem you set out to solve, how you architected it, and the outcome or results you shipped.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "REST API"],
-    link: GITHUB_URL,
-    linkLabel: "View repository",
-    kind: "Development Project",
-    image: "/placeholders/dev-1.svg",
-  },
-  {
-    id: "dev-2",
-    tag: "React · API",
-    name: "Project Two [placeholder]",
-    desc: "A short one-line description of what you built and the problem it solves.",
-    detail:
-      "Placeholder — replace with the full story: what the product does, who it's for, the problem you set out to solve, how you architected it, and the outcome or results you shipped.",
-    stack: ["React", "JavaScript", "REST API", "CSS"],
-    link: GITHUB_URL,
-    linkLabel: "View repository",
-    kind: "Development Project",
-    image: "/placeholders/dev-2.svg",
-  },
-  {
+    {
     id: "dev-3",
-    tag: "Node.js · Backend",
-    name: "Project Three [placeholder]",
-    desc: "A short one-line description of what you built and the problem it solves.",
+    tag: "Full-Stack",
+    name: "QA Review Board",
+    desc: "A visual-first issue tracker for design and UI reviews that turns annotated screenshots into structured issues and one clean link for developers.",
     detail:
-      "Placeholder — replace with the full story: what the service does, the data model, the endpoints you designed, and how it performs in production.",
-    stack: ["Node.js", "Express", "PostgreSQL", "Auth", "Deployment"],
-    link: GITHUB_URL,
+      "A visual-first issue tracking tool for design and UI reviews. Instead of dumping messy screenshots into Jira comments, QA logs annotated visual issues in a structured table and shares one clean link with the developer.",
+    stack: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL" ,"Supabase", "Vercel", "Docker", "TailwindCSS"],
+    link: "https://github.com/unaib-ur-rehman/QA-Review-Board",
     linkLabel: "View repository",
-    kind: "Development Project",
-    image: "/placeholders/dev-3.svg",
+    kind: "",
+    image: "/qa-review-board.png",
   },
   {
     id: "dev-4",
     tag: "Full-Stack",
-    name: "Project Four [placeholder]",
-    desc: "A short one-line description of what you built and the problem it solves.",
+    name: "ClaroDraft",
+    desc: "ClaroDRAFT turns scattered financial and operational data into clear, structured decisions.",
     detail:
-      "Placeholder — replace with the full story: what the product does, who it's for, the problem you set out to solve, how you architected it, and the outcome or results you shipped.",
-    stack: ["React", "Node.js", "Git", "CI/CD"],
-    link: GITHUB_URL,
+      "ClaroDRAFT helps businesses turn scattered data, reporting challenges, financial uncertainty, tax obligations, and operational risks into structured decisions — connecting accounting, reporting, tax, cash flow, and risk insights into one cohesive narrative.",
+    stack: ["React", "JavaScript", "PHP", "Git", "NameCheap"],
+    link: "https://github.com/ClaroDRAFT",
     linkLabel: "View repository",
-    kind: "Development Project",
-    image: "/placeholders/dev-4.svg",
+    kind: "",
+    image: "/clarodraft.png",
+  },
+  {
+    id: "dev-1",
+    tag: "Javascript · CSS",
+    name: "Football Live Score Extension",
+    desc: "A Chrome extension that displays live football scores using the API-FOOTBALL service.",
+    detail:
+      "A Chrome extension that displays live football scores using the API-FOOTBALL service.",
+    stack: ["Javascript", "CSS"],
+    link: "https://github.com/unaib-ur-rehman/football-score-live",
+    linkLabel: "View repository",
+    kind: "Web App",
+    image: "https://raw.githubusercontent.com/unaib-ur-rehman/football-score-live/refs/heads/main/icons/screenshot.png",
+  },
+  {
+    id: "dev-2",
+    tag: "Full-Stack",
+    name: "BubbleTea AI Chat",
+    desc: "A platform providing instant web and mobile interfaces for AI agents and chatbots, acting as the UI layer for developer-built AI tools.",
+    detail:
+      "A platform providing instant web and mobile interfaces for AI agents and chatbots, acting as the UI layer for developer-built AI tools.",
+    stack: ["TypeScript", "Next.js", "React Native", "Python", "AWS", "Vercel", "Expo"],
+    link: GITHUB_URL,
+    linkLabel: "View",
+    kind: "Web / Mobile App",
+    image: "",
   },
 ];
 
@@ -259,40 +260,29 @@ export const designProjects: Project[] = [
 export const education: EducationEntry[] = [
   {
     years: "2019 — 2023",
-    degree: "Your Degree — e.g. BS Computer Science [placeholder]",
-    school: "University Name [placeholder]",
+    degree: "BS Software Engineering",
+    school: "Government College University",
   },
   {
     years: "2017 — 2019",
-    degree: "Intermediate / Pre-Engineering [placeholder]",
-    school: "College Name [placeholder]",
+    degree: "Intermediate / Computer Science",
+    school: "Punjab Group of Colleges",
   },
 ];
 
 export const certifications: Certification[] = [
   {
-    issuer: "Issuer [placeholder]",
-    year: "2024",
-    name: "Certification Name [placeholder]",
-    id: "Credential ID — [placeholder]",
+    issuer: "Anthropic",
+    year: "2026",
+    name: "Claude Code 101",
+    // https://verify.skilljar.com/c/sqn53jz3zdj5
+    id: "Credential ID: sqn53jz3zdj5",
   },
   {
-    issuer: "Issuer [placeholder]",
-    year: "2023",
-    name: "Certification Name [placeholder]",
-    id: "Credential ID — [placeholder]",
-  },
-  {
-    issuer: "Issuer [placeholder]",
-    year: "2023",
-    name: "Certification Name [placeholder]",
-    id: "Credential ID — [placeholder]",
-  },
-  {
-    issuer: "Issuer [placeholder]",
-    year: "2022",
-    name: "Certification Name [placeholder]",
-    id: "Credential ID — [placeholder]",
+    issuer: "Meta",
+    year: "2026",
+    name: "Programming with JavaScript",
+    id: "Credential ID: 2MKLFV04E2M5",
   },
 ];
 

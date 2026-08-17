@@ -122,16 +122,18 @@ export function ProjectModal() {
               </button>
             </div>
 
+            {active.image && (
             <div className="relative aspect-video w-full border-b border-line bg-[color-mix(in_srgb,var(--ink)_7%,var(--paper))]">
               <Image
                 src={active.image}
                 alt={`${active.name} mockup`}
                 fill
                 unoptimized
-                className="object-cover"
+                className="object-contain"
                 sizes="860px"
               />
             </div>
+            )}
 
             <motion.div
               initial="hidden"

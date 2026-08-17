@@ -55,7 +55,7 @@ function ProjectCard({
       whileHover={{ y: -3, borderColor: "var(--accent)" }}
       whileTap={{ scale: 0.99 }}
       onClick={() => onOpen(project, ref.current)}
-      className="flex min-h-[210px] flex-col gap-[18px] rounded-card border border-line bg-[color-mix(in_srgb,var(--ink)_3%,var(--paper))] p-[clamp(24px,3vw,34px)] text-left font-sans"
+      className="flex min-h-[210px] flex-col gap-[18px] rounded-card border border-line bg-[color-mix(in_srgb,var(--ink)_3%,var(--paper))] p-[clamp(24px,3vw,34px)] text-left font-sans cursor-pointer"
     >
       <div className="flex items-center justify-between gap-3">
         <span className="font-mono text-xs text-accent">{project.tag}</span>
@@ -63,12 +63,12 @@ function ProjectCard({
           View details →
         </span>
       </div>
-      <div className="mt-auto">
+      <div className="">
         <h3 className="mb-2.5 font-display text-[clamp(22px,2.2vw,28px)] font-bold tracking-[-0.02em]">
           {project.name}
         </h3>
         <p className="m-0 text-[15.5px] leading-[1.55] text-muted">{project.desc}</p>
       </div>
     </motion.button>
-  );
+  );  
 }

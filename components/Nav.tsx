@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { handleAnchorClick } from "@/lib/scroll";
 import { ThemeToggle } from "./ThemeToggle";
 
 const LINKS = [
@@ -9,12 +10,13 @@ const LINKS = [
   { href: "#skills", label: "Skills" },
   { href: "#work", label: "Work" },
   { href: "#projects", label: "Dev" },
-  { href: "#design", label: "Design" },
+  // { href: "#design", label: "Design" },
   { href: "#certifications", label: "Certs" },
 ];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const reduced = useReducedMotion();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -37,6 +39,7 @@ export function Nav() {
       >
         <a
           href="#top"
+          onClick={(e) => handleAnchorClick(e, "top", !!reduced)}
           className="flex flex-none items-center gap-2.5 font-display text-[clamp(15px,4vw,18px)] font-extrabold tracking-[-0.02em]"
         >
           <span className="h-[9px] w-[9px] flex-none rounded-full bg-accent" />
@@ -44,12 +47,18 @@ export function Nav() {
         </a>
         <div className="flex flex-wrap items-center gap-x-[clamp(14px,2.5vw,34px)] gap-y-2 font-mono text-[12.5px] tracking-[0.02em]">
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href} className="opacity-[.72] transition-opacity hover:opacity-100">
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleAnchorClick(e, link.href.slice(1), !!reduced)}
+              className="opacity-[.72] transition-opacity hover:opacity-100"
+            >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
+            onClick={(e) => handleAnchorClick(e, "contact", !!reduced)}
             className="rounded-full border border-ink px-[15px] py-[7px] transition-colors hover:bg-ink hover:text-paper"
           >
             Get in touch

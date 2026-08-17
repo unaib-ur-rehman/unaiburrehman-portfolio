@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { socials } from "@/lib/content";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
+import { handleAnchorClick } from "@/lib/scroll";
 import { Reveal } from "./Reveal";
 
 export function Footer() {
@@ -56,7 +57,11 @@ export function Footer() {
 
         <div className="relative mt-[clamp(48px,8vh,80px)] flex flex-wrap items-center justify-between gap-4 border-t border-white/[.14] pt-7 font-mono text-[12.5px] opacity-60">
           <span className="whitespace-nowrap">© 2026 Unaib ur Rehman</span>
-          <a href="#top" className="whitespace-nowrap opacity-100">
+          <a
+            href="#top"
+            onClick={(e) => handleAnchorClick(e, "top", !!reduced)}
+            className="whitespace-nowrap opacity-100"
+          >
             Back to top ↑
           </a>
         </div>

@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { profile } from "@/lib/content";
 import { EASE } from "@/lib/motion";
+import { handleAnchorClick } from "@/lib/scroll";
 
 const eyebrowVariants = {
   hidden: { opacity: 0, y: -8 },
@@ -79,9 +80,8 @@ export function Hero() {
         variants={eyebrowVariants}
         className="mb-[clamp(24px,5vh,46px)] flex flex-wrap items-center gap-x-3.5 gap-y-2.5 font-mono text-[12.5px] uppercase tracking-[0.08em] text-muted"
       >
-        <span className="h-px w-[26px] bg-muted" />
-        PORTFOLIO — 2026
-        <span className="ml-auto inline-flex items-center gap-2 whitespace-nowrap">
+        {/* <span className="h-px w-[26px] bg-muted" /> */}
+        <span className="inline-flex items-center gap-2 whitespace-nowrap">
           <span className="relative flex h-2 w-2 items-center justify-center">
             <span className="h-2 w-2 rounded-full bg-accent" />
             {!reduced && (
@@ -139,16 +139,19 @@ export function Hero() {
         </motion.p>
         <motion.div variants={fadeItem} className="flex flex-wrap gap-3">
           <a
-            href="#projects"
+            href={process.env.NEXT_PUBLIC_RESUME_URL}
+            target="_blank"
+            rel="noopener"
             className="group inline-flex items-center gap-2.5 rounded-full border border-ink bg-ink px-6 py-3.5 text-[15px] font-semibold text-paper transition-colors duration-200 hover:bg-paper hover:text-ink"
           >
-            View work{" "}
+            View Resume{" "}
             <span className="inline-block font-mono transition-transform duration-200 group-hover:translate-x-1">
-              →
+              ↗
             </span>
           </a>
           <a
             href="#contact"
+            onClick={(e) => handleAnchorClick(e, "contact", !!reduced)}
             className="inline-flex items-center rounded-full border border-ink px-6 py-3.5 text-[15px] font-semibold transition-colors duration-200 hover:bg-ink hover:text-paper"
           >
             Contact

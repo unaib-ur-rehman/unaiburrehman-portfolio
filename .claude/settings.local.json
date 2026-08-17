@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(echo \"started with pid $!\")",
+      "Bash(curl -s -o /tmp/scaffold_a2312921/page.html -w \"%{http_code}\\\\n\" http://localhost:4173/)",
+      "Read(//tmp/scaffold_a2312921/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://fonts.googleapis.com/css2?family=Bricolage+Grotesque)"
+    ]
+  }
+}

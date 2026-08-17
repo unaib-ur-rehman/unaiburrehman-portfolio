@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+:root {
+  --accent: #e8452a;
+  --ink: #16150f;
+  --paper: #f6f4ef;
+  --muted: #6b6860;
+  --line: rgba(0, 0, 0, 0.12);
+}
+
+:root[data-theme="dark"] {
+  --ink: #f3f1ea;
+  --paper: #121210;
+  --muted: #9a968c;
+  --line: rgba(255, 255, 255, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #f3f1ea;
+    --paper: #121210;
+    --muted: #9a968c;
+    --line: rgba(255, 255, 255, 0.14);
+  }
+}
+
+/*
+ * These resets must live in Tailwind's `base` layer, not as unlayered CSS —
+ * under cascade layers, unlayered rules always beat every `@layer` rule
+ * (Tailwind's utilities included) no matter the specificity. Left unlayered,
+ * `a { color: inherit }` would silently override every `text-*` utility
+ * applied directly to a link.
+ */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  li {
+    overflow-wrap: break-word;
+  }
+
+  nav a {
+    white-space: nowrap;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

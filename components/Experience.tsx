@@ -38,9 +38,9 @@ export function Experience() {
               <h3 className="mb-2 font-display text-[clamp(22px,2.4vw,30px)] font-bold tracking-[-0.02em]">
                 {job.role}
               </h3>
-              <p className="m-0 max-w-[560px] text-base leading-[1.55] text-muted">
+              {/* <p className="m-0 max-w-[560px] text-base leading-[1.55] text-muted">
                 {job.desc}
-              </p>
+              </p> */}
             </div>
             <span className="order-3 ml-auto flex-[0_1_auto] text-right text-[15px] font-semibold">
               {job.company}

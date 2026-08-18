@@ -49,7 +49,7 @@ export const profile = {
   intro:
     "I'm Unaib ur Rehman — an experienced full-stack developer who also designs. I build products end to end: React front ends, Node.js APIs, and the interfaces that hold them together.",
   lead: "An experienced Full-Stack Developer — shipping production apps across the stack, with a designer's eye for the interface.",
-  body: "I work end to end: architecting APIs and data models in Node.js, building fast React front ends, and designing the UI myself when it needs to be right. Owning both sides means fewer handoffs and better products. Outside of work, I'm passionate about cricket, football, entrepreneurship, and good food.",
+  body: "I work end to end: architecting APIs and data models, building fast React front ends, and designing the UI myself when it needs to be right. Owning both sides means fewer handoffs and better products. Outside of work, I'm passionate about cricket, football, entrepreneurship, and good food.",
   interests: ["Cricket", "Football", "Entrepreneurship", "Good food"],
 };
 

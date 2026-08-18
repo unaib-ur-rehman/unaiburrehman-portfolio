@@ -132,10 +132,7 @@ export function Hero() {
           variants={fadeItem}
           className="m-0 max-w-[540px] text-[clamp(17px,1.5vw,20px)] leading-[1.55] text-ink"
         >
-          I&apos;m <strong className="font-semibold">{profile.name}</strong> — an
-          experienced full-stack developer who also designs. I build products
-          end to end: React front ends, Node.js APIs, and the interfaces that
-          hold them together.
+          I&apos;m <strong className="font-semibold">{profile.name}</strong> — Strong problem solver and effective communicator with expertise in writing reliable and reusable code. Skilled in identifying issues early and applying critical thinking to resolve them. Experienced in working independently or as part of remote teams, with a sharp eye for detail and debugging. Adept at crafting user-centered designs that drive engaging experiences, with a solid understanding of human-centered design principles. Proficient in balancing business goals with user needs to create intuitive and seamless interfaces.
         </motion.p>
         <motion.div variants={fadeItem} className="flex flex-wrap gap-3">
           <a

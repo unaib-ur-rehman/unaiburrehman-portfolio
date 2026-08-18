@@ -295,5 +295,5 @@ export const socials: Social[] = [
     url: "https://stackoverflow.com/users/23595049/rehman-unaib",
   },
   { label: "Instagram", url: "https://www.instagram.com/unaiburrehman31/" },
-  { label: "Email", url: "unaiburrehman31@gmail.com" },
+  { label: "Email", url: "mailto:unaiburrehman31@gmail.com" },
 ];

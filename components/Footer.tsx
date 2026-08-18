@@ -39,20 +39,22 @@ export function Footer() {
           variants={container}
           className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,210px),1fr))] gap-px overflow-hidden rounded-2xl bg-ink"
         >
-          {socials.map((social) => (
-            <motion.a
-              key={social.label}
-              variants={item}
-              href={social.url}
-              target="_blank"
-              rel="noopener"
-              whileHover={{ backgroundColor: "color-mix(in srgb, var(--paper) 8%, var(--ink))" }}
-              className="flex items-center justify-between bg-ink px-6 py-[22px] shadow-[0_0_0_1px_rgba(255,255,255,.14)]"
-            >
-              <span className="text-base font-semibold">{social.label}</span>
-              <span className="font-mono opacity-55">↗</span>
-            </motion.a>
-          ))}
+          {socials.map((social) => {
+            const isMailto = social.url.startsWith("mailto:");
+            return (
+              <motion.a
+                key={social.label}
+                variants={item}
+                href={social.url}
+                {...(!isMailto && { target: "_blank", rel: "noopener" })}
+                whileHover={{ backgroundColor: "color-mix(in srgb, var(--paper) 8%, var(--ink))" }}
+                className="flex items-center justify-between bg-ink px-6 py-[22px] shadow-[0_0_0_1px_rgba(255,255,255,.14)]"
+              >
+                <span className="text-base font-semibold">{social.label}</span>
+                <span className="font-mono opacity-55">↗</span>
+              </motion.a>
+            );
+          })}
         </motion.div>
 
         <div className="relative mt-[clamp(48px,8vh,80px)] flex flex-wrap items-center justify-between gap-4 border-t border-white/[.14] pt-7 font-mono text-[12.5px] opacity-60">
